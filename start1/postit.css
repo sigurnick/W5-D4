@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(201, 201, 201);
+  font-family: "Ubuntu", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+@keyframes cardDrops{
+0%{transform: scale(10);}
+10%{transform: scale(9);}
+20%{transform: scale(8);}
+30%{transform: scale(7);}
+40%{transform: scale(6);}
+50%{transform: scale(5);}
+60%{transform: scale(4);}
+70%{transform: scale(3);}
+80%{transform: scale(2);}
+90%{transform: scale(1);}
+100%{transform: scale(1);}
+
+}
+
+#cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  animation: cardDrops 2s linear;
+}
+.card {
+  margin: 10px;
+  width: 22%;
+  height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 5px 8px 15px -5px #000000;
+  box-shadow: 5px 8px 15px -5px #000000;
+
+  transition: transform 2s;
+}
+
+.card:hover{
+    transform: scale(1.5);
+    z-index: 1;
+}
+
+.cardYellow {
+  background-color: rgb(249, 249, 114);
+  transform: rotate(356deg);
+}
+.cardGreen {
+  background-color: rgb(114, 249, 121);
+  transform: rotate(4deg);
+}
+.cardViolet {
+  background-color: rgb(152, 114, 249);
+  transform: rotate(356deg);
+}
+.cardBlue {
+  background-color: rgb(114, 213, 249);
+  transform: rotate(4deg);
+}
